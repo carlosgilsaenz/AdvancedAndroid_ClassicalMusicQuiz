@@ -130,7 +130,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         mMediaSession.setPlaybackState(mStateBuilder.build());
 
         //  Set Callbacks
-        mMediaSession.setCallback(new MySessionCallback());
+        mMediaSession.setCallback(new mySessionCallback());
 
         //  Start Media Session
         mMediaSession.setActive(true);
@@ -335,7 +335,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     /**
      *  Media Session Callbacks, where all external clients control the player
      */
-    private class MySessionCallback extends MediaSessionCompat.Callback{
+    private class mySessionCallback extends MediaSessionCompat.Callback{
         @Override
         public void onPlay() {
             mExoPlayer.setPlayWhenReady(true);
